@@ -1,0 +1,7 @@
+Open
+first page asking to login or signup, home page.
+login page and signup page.
+login page will ask for username and pwd, which will be matched with the one in the db and profile page will Open
+signup page will ask for details like fname, lname (travel company name), emailid, website, phone,alternate phone, address, state, city, 2 tables(travel company and individual)
+it will open to profile page which will show book flight option and previous flights
+(make flight table with 20 example flights.)(passengers table will inser info through form for booking) +2 tables
