@@ -1,0 +1,143 @@
+
+/*  CSS for layout.html */
+.my_footer{
+
+    left : 0;
+    bottom: 0;
+    width: 100%;
+    background: #0D579A;
+    color: white;
+    text-align: right;
+    display: flex;
+    margin-top: 1%;
+    font-family: "Charm";
+    font-size: 20px;
+}
+
+.links {
+    margin-left: 980px;
+}
+
+.container-fluid, .container, .jumbotron-fluid {
+
+    font-family: "Signika";
+    font-size: 30px;
+}
+
+.copyright{
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 100%;
+    user-select: none;
+}
+
+.footer-items{
+    width: 100%;
+    text-align: right;
+    /* margin-right: 40px; */
+}
+
+.footer-items-li{
+  display: inline-block;
+  list-style: none;
+  padding: 20px;
+  padding-bottom: 15px;
+  color: white;
+  /* text-align: right; */
+}
+
+.footer-items-li-a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-items-li-a:hover {
+  color: red;
+}
+
+.navbar-brand {
+    font-family: "Charm";
+    font-size: 40px;
+}
+
+.navbar-right {
+    font-family: "Charm";
+}
+
+/* CSS for home.html */
+
+#searchflights {
+    display: inline;
+    padding: 10px;
+    font-family: "Signika";
+    font-size: 10px;
+    /* width: 50px; */
+}
+
+#travel {
+    font-family: "Signika";
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.homesearch {
+    margin-left: 10px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 50%;
+  }
+
+ .searchtitle {
+     font-family: "Signika";
+
+ }
+
+ .btn-warning {
+     font-family: "Signika";
+     font-size: 15px;
+ }
+
+ /* CSS for signup.html */
+
+ h3 {
+     font-family: "Signika";
+     font-size: 30px;
+     font-weight: bolder;
+ }
+
+ .input-group-text{
+
+     background : #0D579A;
+     color: white;
+ }
+ /* CSS for login.html */
+
+ #main{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto
+}
+
+#form-content{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2.5px solid blue;
+    border-radius: 20px;
+}
+
+/* CSS for about.html */
+.doodle {
+    width:100%;
+    /* height:-50; */
+}
+
+/* .verticalline {
+    transform: rotate(90deg) translateX(-250px) translateY(-175px);
+    width: 400px;
+} */
