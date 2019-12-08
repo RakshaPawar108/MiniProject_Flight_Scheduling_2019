@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block title %} Sign Up {% endblock %}
+
+{% block body %}
+
+<div id = "main">
+    <div id="heading" class="container">
+        <header class="jumbotron" align="center"><h3> Sign Up </h3></header>
+    </div>
+
+    <div id="div-firstClass" class="container-fluid">
+        <form id="firstClassForm" class="form-group">
+
+            <div class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Name</span>
+                </div>
+                <input type="text" id="person-fname" name="person-fname" class="form-control" placeholder="First Name" required>
+                <input type="text" id="person-lname" name="person-lname" class="form-control" placeholder="Last Name" required>
+            </div>
+
+            <div   class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">UserName</span>
+                </div>
+                <input type="text" id="person-username" name="person-username" class="form-control" placeholder="Eg: SheldonCooper123" required>
+            </div>
+
+            <div  class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email ID </span>
+                </div>
+                <input type="email" id="person-Email"  name="person-Email" class="form-control" placeholder="example@xyz.com" required>
+            </div>
+
+            <div   class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Password </span>
+                </div>
+                <input type="password" id="person-Password" name="person-Password" class="form-control" required>
+            </div>
+
+            <div  class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Confirm Password </span>
+                </div>
+                <input type="password" id="person-confirmPass"  name="person-confirmPass" class="form-control" required>
+            </div>
+
+            <div class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Phone Number </span>
+                </div>
+                <input type="text" id="person-Phone" name="person-Phone" class="form-control" placeholder="+00 12345 67890" required>
+            </div>
+
+            <div  name="person-Address" class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Address </span>
+                </div>
+                <input type="text" id="person-Address" name='person-Address' class="form-control" placeholder= "Address" required>
+                <input type="text" id="person-City" name = 'person-City' class="form-control" placeholder= "City" required>
+                <input type="text" id="person-State" name='person-State' class="form-control" placeholder= "State" required>
+                <input type="text" id="person-Country" name='person-Country' class="form-control" placeholder= "Country" required>
+            </div>
+
+            <div  class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Security Question </span>
+                </div>
+                <input type="text" id="person-SeqQues"  name="person-SeqQues" class="form-control" placeholder="What is the name of your pet?" required>
+            </div>
+
+            <div  class="input-group mb-3 input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> Answer </span>
+                </div>
+                <input type="text" id="person-SeqAns" name="person-SeqAns" class="form-control" required>
+            </div>
+
+            <div class="submit-button container" align="center">
+                <button type="button" class="btn btn-success btn-lg my-button" onclick="signup('/ursignup')"> Submit </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

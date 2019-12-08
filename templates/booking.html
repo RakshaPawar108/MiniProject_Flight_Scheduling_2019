@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %} Booking {% endblock %}
+
+{%block nav_items%}
+    <li><a href="/loginhome" style="color: white; font-size: 18px;"><span class="fa fa-home fa-2x"></span>  Home </a></li>
+    <li><a href="/profile" style="color: white; font-size: 18px;"><span class="fa fa-user-circle fa-2x"></span>  Profile </a></li>
+    <li><a href="/login" style="color: white;font-size: 18px;"><span class="fa fa-sign-out fa-2x"></span>  Logout </a></li>
+{%endblock%}
+
+{% block body %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class = "card-group">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <form method = "POST">
+
+                            <div class="booktitle">
+                                <h2> BOOK YOUR FLIGHT </h2>
+                            </div>
+
+                            <div id="bookflight">
+                                <p id="successfulbooking">
+
+                                </p>
+
+                                <select id="lol" name="bookingbox" class="custom-select custom-select-md">
+                                        {% for flight in flights %}
+                                            <option id="flight" value = "{{ flight[0] }}">
+                                                {{ flight[1]}}-{{ flight[2] }} to {{ flight[3] }}-{{ flight[4] }}
+                                            </option>
+                                        {% endfor %}
+                                </select>
+                            </div>
+                            <br />
+                                <button type="button" class="btn btn-warning" style="padding:10px;" onclick = "boook()"> Book Flight </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+{% endblock %}

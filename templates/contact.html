@@ -1,0 +1,55 @@
+{% extends "layout.html"%}
+{%block title%} Contact Us {% endblock %}
+
+{% block body %}
+<div class="container-fluid bg-grey" style="height:600px">
+    <h2 class="jumbotron text-center"> CONTACT US </h2>
+    <br />
+    <div class="row">
+        <div class="col-sm-5" style="font-size: 25px;">
+            <p> Contact us and we will get back to you as soon as possible. </p>
+            <p>
+                <span class="material-icons">place</span> Pune, Maharashtra
+            </p>
+            <p>
+                <span class="material-icons">phone</span> +91 96576 19400
+            </p>
+            <p>
+                <span class="material-icons">email</span> Email Us : <a href="mailto:rakshapawar10.sae@gmail.com"> FirstClass </a>
+            </p>
+        </div>
+
+        <div class="col-sm-7">
+
+            <form id="contact">
+                <div class="row">
+
+                    <div class="col-sm-6 input-group mb-3" id="name" name="name">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Name</span>
+                        </div>
+                        <input type="text" class="form-control border border-primary" placeholder="Name" required>
+                    </div>
+
+                    <div class="col-sm-6 input-group mb-3" id="email" name="email">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email</span>
+                        </div>
+                        <input type="email" class="form-control border border-primary" placeholder="Email" required>
+                    </div>
+                </div>
+
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-success pull-right" type="submit" onclick="alert('Message Sent')"> Send </button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

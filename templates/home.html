@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block title %} FirstClass Home {% endblock %}
+
+{% block body %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="card-group">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <p class = "card-text">
+                            <form class="homesearch" method = "POST">
+                                <div class = "searchtitle">
+                                    <h2> Search Your Flight </h2>
+                                </div>
+
+                                <div id="searchflights">
+
+                                    <select name="searchbox" id="searching" class="custom-select custom-select-md">
+                                            {% for flight in flights %}
+                                                <option value = "{{ flight[0] }}">
+                                                    {{ flight[1]}}-{{ flight[2] }} to {{ flight[3] }}-{{ flight[4] }}
+                                                </option>
+                                                {% endfor %}
+                                    </select>
+
+                                </div>
+                                    <br /><br />
+                                <button type="button" class="btn btn-warning" style="padding:10px;">Search Flights</button>
+
+                            </form>
+                            <!-- <p id= "searchresult"> -->
+                                <!-- Airline: {{air}}
+                                Origin : {{ori}} - {{orc}}
+                                Destination: {{des}} - {{desco}}
+                                Type: {{ty}}
+                                Economy: Rs. {{eco}}
+                                Business: Rs. {{bus}} -->
+                            <!-- </p> -->
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="travel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+       <li data-target="#travel" data-slide-to="0" class="active"></li>
+       <li data-target="#travel" data-slide-to="1"></li>
+       <li data-target="#travel" data-slide-to="2"></li>
+       <li data-target="#travel" data-slide-to="3"></li>
+       <li data-target="#travel" data-slide-to="4"></li>
+       <li data-target="#travel" data-slide-to="5"></li>
+       <li data-target="#travel" data-slide-to="6"></li>
+       <li data-target="#travel" data-slide-to="7"></li>
+     </ul>
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="http://127.0.0.1:5000/static/images/india.jpg" alt="India" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px" > India </h3>
+            <p> The Land of Rich Heritage! </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/bali.jpg" alt="Bali" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px"> Bali, Indonesia </h3>
+            <p> Beach Please! </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/ny.jpg" alt="New York" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px">New York</h3>
+            <p>We love the Big Apple!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/la.jpg" alt="Los Angeles" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px">Los Angeles</h3>
+            <p>We had such a great time in LA!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/singapore.jpg" alt="Singapore" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px">Singapore</h3>
+            <p>Come Visit The Lion City!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/switzerland.jpg" alt="Switzerland" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px">Switzerland</h3>
+            <p>Chocolates, Mountains, Cow-Bells and More!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/germany.jpg" alt="Germany" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px">Germany</h3>
+            <p>Guten Tag!</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="http://127.0.0.1:5000/static/images/toronto.jpg" alt="Canada" width="800" height="400">
+          <div class="carousel-caption">
+            <h3 style="font-size: 30px">Canada</h3>
+            <p>Home of the Maples!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#travel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#travel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+  </div>
+
+
+{% endblock %}

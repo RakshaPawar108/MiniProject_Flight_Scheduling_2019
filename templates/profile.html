@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block title %} Profile {% endblock %}
+
+{%block nav_items%}
+    <li><a href="/booking" style="color: white; font-size: 18px;"><span class="fa fa-send fa-2x"></span>  Book Flight </a></li>
+    <li><a href="/loginhome" style="color: white; font-size: 18px;"><span class="fa fa-home fa-2x"></span>  Home </a></li>
+    <li><a href="/logout" style="color: white;font-size: 18px;"><span class="fa fa-sign-out fa-2x"></span>  Logout </a></li>
+{%endblock%}
+
+{% block body %}
+<hr />
+    <div class="container-fluid">
+        <div class="card" style="width: 30%; height: 30%; margin-left: 35%">
+            <img class="card-img-top" src="http://127.0.0.1:5000/static/images/avatar.png" alt="Card Image" height= "350px" width="300px" style="border-bottom: 2px solid blue" />
+                <div class = "card-body">
+                    <h4 class="card-title"> {{un}} </h4>
+                    <p class="card-text" style="font-size: 20px;">
+                        {{fn}} {{ln}}
+                        <br />
+                        Phone: {{ph}}
+                        <br />
+                        Email ID: {{em}}
+                        <br />
+                        Address: {{ad}}
+                        <br />
+                        City: {{ci}}
+                        <br />
+                        State: {{st}}
+                        <br />
+                        Country: {{co}}
+                    </p>
+                </div>
+            </div>
+        <hr />
+    </div>
+
+    <div class = "container-fluid" style = "font-size: 20px;">
+        <ul class="nav nav-tabs" style="margin-top:-5px;">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#first">Your Flights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#second">Analyse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#third">Notifications</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+              <div class="tab-pane container active" id="first">
+                flights....
+                <br />
+              </div>
+              <div class="tab-pane container fade" id="second">
+                  Graphs....
+                  <br />
+              </div>
+              <div class="tab-pane container fade" id="third">
+                  Notifications....
+                  <br />
+              </div>
+        </div>
+    </div>
+
+
+{% endblock %}
